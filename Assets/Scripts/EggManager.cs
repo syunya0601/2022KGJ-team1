@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using Saito;
 using UnityEngine;
 
-public class EggManager : MonoBehaviour
+namespace Saito
 {
-    [SerializeField] private Model _model;
-    [SerializeField] private int _damegeAmount=10;
-    private void OnTriggerEnter(Collider other)
+    public class EggManager : MonoBehaviour
     {
-        if (other.gameObject.tag=="Enemy1")
+        [SerializeField] private Model _model;
+        [SerializeField] private int _damegeAmount = 10;
+
+        private void OnTriggerEnter(Collider other)
         {
             _model.UpdateCount(_damegeAmount);
         }
