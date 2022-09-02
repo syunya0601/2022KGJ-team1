@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 
-public class Model : MonoBehaviour
+namespace Saito
 {
-  private IntReactiveProperty _current = new IntReactiveProperty();
-  public IReactiveProperty<int> Current => _current;
-
-  public void UpdateCount(int value)
+  public class Model : MonoBehaviour
   {
-    _current.Value = Mathf.Clamp(value, 0, 100);
+    private IntReactiveProperty _current = new IntReactiveProperty();
+    public IReactiveProperty<int> Current => _current;
+
+    public void UpdateCount(int value)
+    {
+      _current.Value = Mathf.Clamp(value, 0, 100);
+    }
   }
 }

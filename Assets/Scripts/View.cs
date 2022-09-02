@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class View : MonoBehaviour
+namespace Saito
 {
-    [SerializeField] private Image _image;
-    [SerializeField] private Text _text;
-
-    // Start is called before the first frame update
-    public void UpdateText(string s)
+    public class View : MonoBehaviour
     {
-        _text.text = s;
-    }
+        [SerializeField] private Image _image;
+        [SerializeField] private Text _text;
 
-    public void ChangeSprite(Sprite sprite)
-    {
-        _image.sprite = sprite;
+        // Start is called before the first frame update
+        public void UpdateText(string s)
+        {
+            _text.text = s;
+        }
+
+        public void ChangeSprite(Sprite sprite)
+        {
+            _image.sprite = sprite;
+        }
     }
 }
