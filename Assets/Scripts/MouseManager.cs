@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class MouseManager : MonoBehaviour
 {
+
+    private GameObject obj;
+    ModeManager modemanager;
     GameObject clickedGameObject;
     // Start is called before the first frame update
     void Start()
     {
-        
+        obj = GameObject.Find("ModeManager");
+        modemanager = obj.GetComponent<ModeManager>();
     }
 
     // Update is called once per frame
@@ -25,11 +29,24 @@ public class MouseManager : MonoBehaviour
             if (hitSprite == true)
             {
                 clickedGameObject = hitSprite.transform.gameObject;
-                if (clickedGameObject.tag == "Enemy1")
+                if (clickedGameObject.tag == "Enemy1" && modemanager.mode1==true)
                 {
-                    Debug.Log(clickedGameObject);
+                    //Debug.Log(clickedGameObject);
                     Destroy(clickedGameObject);
                 }
+                clickedGameObject = hitSprite.transform.gameObject;
+                if (clickedGameObject.tag == "Enemy2" && modemanager.mode2 == true)
+                {
+                    //Debug.Log(clickedGameObject);
+                    Destroy(clickedGameObject);
+                }
+                clickedGameObject = hitSprite.transform.gameObject;
+                if (clickedGameObject.tag == "Enemy3" && modemanager.mode3 == true)
+                {
+                    //Debug.Log(clickedGameObject);
+                    Destroy(clickedGameObject);
+                }
+
             }
         }
     }
