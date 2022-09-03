@@ -1,4 +1,3 @@
-using System.Threading;
 using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEditor;
@@ -18,15 +17,14 @@ namespace Saito
            _button.OnClickAsObservable()
                 .Subscribe(_ =>
                 {
-                    var token = this.gameObject.GetCancellationTokenOnDestroy();
-                    LoadScene(token).Forget();
+                    LoadScene();
                 })
                 .AddTo(this);
        }
 
-       private async UniTask LoadScene(CancellationToken token)
+       private async void LoadScene()
        {
-           await SceneManager.LoadSceneAsync(_scene.name).WithCancellation(token).AsAsyncUnitUniTask();
+           await SceneManager.LoadSceneAsync(_scene.name);
        }
     }
 }
