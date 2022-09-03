@@ -446,6 +446,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6543200670729083913, guid: 7961d655bb05312489901909b951eb12, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.53778046
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543200670729083913, guid: 7961d655bb05312489901909b951eb12, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 83
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543200670729083913, guid: 7961d655bb05312489901909b951eb12, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543200670729083916, guid: 7961d655bb05312489901909b951eb12, type: 3}
+      propertyPath: m_Size.x
+      value: 80.27672
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543200670729083916, guid: 7961d655bb05312489901909b951eb12, type: 3}
+      propertyPath: m_Size.y
+      value: 21.178686
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543200670729083916, guid: 7961d655bb05312489901909b951eb12, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.62688446
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543200670729083916, guid: 7961d655bb05312489901909b951eb12, type: 3}
+      propertyPath: m_Offset.y
+      value: -10.089343
+      objectReference: {fileID: 0}
     - target: {fileID: 6543200670729083917, guid: 7961d655bb05312489901909b951eb12, type: 3}
       propertyPath: _model
       value: 

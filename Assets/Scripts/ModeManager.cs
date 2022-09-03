@@ -36,7 +36,7 @@ public class ModeManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.Z)|| Input.GetKey(KeyCode.Alpha1))
         {
             mode1 = true;
             mode2 = false;
@@ -46,7 +46,7 @@ public class ModeManager : MonoBehaviour
             MainSpriteRenderer.sprite = Mode1;
             pos.y = -3.8f;
         }
-        if (Input.GetKey(KeyCode.X))
+        if (Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.Alpha2))
         {
             mode1 = false;
             mode2 = true;
@@ -55,7 +55,7 @@ public class ModeManager : MonoBehaviour
             MainSpriteRenderer.sprite = Mode2;
             pos.y = -3.8f;
         }
-        if (Input.GetKey(KeyCode.C))
+        if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.Alpha3))
         {
             mode1 = false;
             mode2 = false;
@@ -64,7 +64,7 @@ public class ModeManager : MonoBehaviour
             MainSpriteRenderer.sprite = Mode3;
             pos.y = -3.8f;
         }
-        if (Input.GetKey(KeyCode.V))
+        if (Input.GetKey(KeyCode.V) || Input.GetKey(KeyCode.Alpha4))
         {
             mode1 = false;
             mode2 = false;
