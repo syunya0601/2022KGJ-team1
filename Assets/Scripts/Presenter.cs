@@ -20,19 +20,34 @@ namespace Saito
         [SerializeField] private Sprite _sprite;
 
         [SerializeField] private SceneAsset scene;
+        [SerializeField] private ScoreManager _scoreManager;
 
         // Start is called before the first frame update
         void Start()
-        {
+        { 
+            var time = 0.0f;
+                     Observable.EveryUpdate()
+                         .Subscribe(value =>
+                             {
+                                 Task.Delay(TimeSpan.FromSeconds(10f));
+                                 time += Time.deltaTime;
+                                 _view.UpdateText(time.ToString("0.00"));
+                             },
+                             ex => Debug.LogError("OnError!"),
+                             () => Debug.Log("OnCompleted!")
+                         ).AddTo(this);
+                     
             //model=>view
             _model.Current
                 .Subscribe(x =>
                     {
                         if (x >= 100)
                         {
-                            Thread.Sleep(TimeSpan.FromSeconds(2f));
+                            //Thread.Sleep(TimeSpan.FromSeconds(2f));
                             _view.ChangeSprite(_sprite);
-                            SceneManager.LoadScene(scene.name);
+                            _scoreManager.SetScore((int)time);
+                            _scoreManager.SetTime(time);
+                             SceneManager.LoadScene(scene.name);
                         }
 
                         _slider.value = x;
@@ -50,17 +65,6 @@ namespace Saito
                 .Subscribe(x => _model.UpdateCount((int) x))
                 .AddTo(this);
             */
-
-            var time = 0.0f;
-            Observable.EveryUpdate()
-                .Subscribe(value =>
-                    {
-                        time += Time.deltaTime;
-                        _view.UpdateText(time.ToString("0.00"));
-                    },
-                    ex => Debug.LogError("OnError!"),
-                    () => Debug.Log("OnCompleted!")
-                ).AddTo(this);
         }
     }
 }
