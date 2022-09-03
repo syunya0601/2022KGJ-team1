@@ -18,11 +18,13 @@ public class BombManager : MonoBehaviour
     float MaxTime = 10.0f;
     float MinTime = 5.0f;
 
+    public AudioClip sound1;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -56,10 +58,13 @@ public class BombManager : MonoBehaviour
 
             if (instanceRand == 1)
             {
+                audioSource.PlayOneShot(sound1);
                 Instantiate(createPrefab1, enemyPosition1, Quaternion.identity);
+                
             }
             else if (instanceRand == 2)
             {
+                audioSource.PlayOneShot(sound1);
                 Instantiate(createPrefab2, enemyPosition2, Quaternion.identity);
             }
             time = 0f;
