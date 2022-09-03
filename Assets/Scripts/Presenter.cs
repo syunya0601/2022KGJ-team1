@@ -36,20 +36,20 @@ namespace Saito
                         }
 
                         _slider.value = x;
-                        //_view.UpdateText(_slider.value.ToString());
+                        _view.UpdateText(_slider.value.ToString());
                     },
                     ex => Debug.LogError("OnError!"),
                     () => Debug.Log("OnCompleted!")
                 ).AddTo(this);
 
+            
             /*
             //sliderの値が変動したら実体にも値を変更する
             _slider
                 .OnValueChangedAsObservable()
                 .Subscribe(x => _model.UpdateCount((int) x))
                 .AddTo(this);
-                */
-
+            */
 
             var time = 0.0f;
             Observable.EveryUpdate()
