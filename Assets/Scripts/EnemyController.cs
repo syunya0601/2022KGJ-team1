@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    
+
     public float speed;
     [SerializeField] Transform target;//óëÇÃç¿ïW
     public int power=0;//çUåÇóÕ
@@ -33,12 +35,13 @@ public class EnemyController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         
-        if (collider.gameObject.name == "wall")
+        if (collider.gameObject.tag == "wall")
         {
             if (wallDestroy == true)
             {
+                MouseManager.DestroyCount1 += 1;
                 Destroy(this.gameObject);
-                //Debug.Log("hit");
+                
             }
         }
     }

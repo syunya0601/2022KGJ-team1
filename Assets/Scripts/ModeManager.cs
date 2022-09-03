@@ -14,10 +14,10 @@ public class ModeManager : MonoBehaviour
     public Sprite Mode2;
     public Sprite Mode3;
     public Sprite Mode4;
+    public Sprite none;
 
-    [SerializeField] GameObject wall1;
-    [SerializeField] GameObject wall2;
-    [SerializeField] GameObject wall3;
+    [SerializeField] GameObject wall;
+
 
     Transform myTransform;
     Vector3 pos;
@@ -72,20 +72,19 @@ public class ModeManager : MonoBehaviour
             mode4 = true;
             MainSpriteRenderer.sprite = Mode4;
 
-            wall1.gameObject.SetActive(true);
-            wall2.gameObject.SetActive(true);
-            wall3.gameObject.SetActive(true);
+            wall.gameObject.SetActive(true);
 
             pos.y = -2.8f;
         }
-        if (Input.GetKeyUp(KeyCode.V))
+        if (Input.GetKeyUp(KeyCode.V) || Input.GetKeyUp(KeyCode.Alpha4))
         {
             mode4 = false;
-            wall1.gameObject.SetActive(false);
-            wall2.gameObject.SetActive(false);
-            wall3.gameObject.SetActive(false);
+            wall.gameObject.SetActive(false);
             pos.y = -2.8f;
+            MainSpriteRenderer.sprite = none;
+
         }
         myTransform.position = pos;  // ç¿ïWÇê›íË
+        
     }
 }

@@ -36,8 +36,8 @@ public class BombManager : MonoBehaviour
         //Debug.Log(LevelTime);
         if (LevelTime > 10)
         {
-            MaxTime -= 0.1f;
-            MinTime -= 0.1f;
+            MaxTime -= 0.2f;
+            MinTime -= 0.2f;
             LevelTime = 0;
             //Debug.Log(MaxTime);
             //Debug.Log(MinTime);

@@ -9,6 +9,10 @@ public class MouseManager : MonoBehaviour
     private GameObject obj;
     ModeManager modemanager;
     GameObject clickedGameObject;
+
+    public static int DestroyCount1 = 0;//score
+    public static int DestroyCount2 = 0;//score
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +23,8 @@ public class MouseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(DestroyCount1);
+        //Debug.Log(DestroyCount2);
         if (Input.GetMouseButtonDown(0))
         {
 
@@ -34,18 +40,21 @@ public class MouseManager : MonoBehaviour
                 {
                     //Debug.Log(clickedGameObject);
                     Destroy(clickedGameObject);
+                    DestroyCount2 += 1;
                 }
                 clickedGameObject = hitSprite.transform.gameObject;
                 if (clickedGameObject.tag == "Enemy2" && modemanager.mode2 == true)
                 {
                     //Debug.Log(clickedGameObject);
                     Destroy(clickedGameObject);
+                    DestroyCount2 += 1;
                 }
                 clickedGameObject = hitSprite.transform.gameObject;
                 if (clickedGameObject.tag == "Enemy3" && modemanager.mode3 == true)
                 {
                     //Debug.Log(clickedGameObject);
                     Destroy(clickedGameObject);
+                    DestroyCount2 += 1;
                 }
                 clickedGameObject = hitSprite.transform.gameObject;
                 if (clickedGameObject.tag == "Bomb")

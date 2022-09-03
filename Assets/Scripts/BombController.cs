@@ -15,7 +15,7 @@ public class BombController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed = Random.Range(0.1f, 0.05f);
+        speed = Random.Range(0.05f, 0.01f);
         Vector2 position = transform.position;
         if (direction == 1)
         {
