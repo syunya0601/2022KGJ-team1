@@ -32,13 +32,13 @@ public class EnemyController : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
-        //Debug.Log("hit");
+        
         if (collider.gameObject.name == "wall")
         {
             if (wallDestroy == true)
             {
                 Destroy(this.gameObject);
-                Debug.Log("hit");
+                //Debug.Log("hit");
             }
         }
     }
