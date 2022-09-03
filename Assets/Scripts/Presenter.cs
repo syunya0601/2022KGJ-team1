@@ -28,7 +28,7 @@ namespace Saito
             _model.Current
                 .Subscribe(x =>
                     {
-                        if (x == 100)
+                        if (x >= 100)
                         {
                             Thread.Sleep(TimeSpan.FromSeconds(2f));
                             _view.ChangeSprite(_sprite);
@@ -42,11 +42,13 @@ namespace Saito
                     () => Debug.Log("OnCompleted!")
                 ).AddTo(this);
 
+            /*
             //sliderの値が変動したら実体にも値を変更する
             _slider
                 .OnValueChangedAsObservable()
                 .Subscribe(x => _model.UpdateCount((int) x))
                 .AddTo(this);
+                */
 
 
             var time = 0.0f;

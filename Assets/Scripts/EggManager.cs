@@ -17,15 +17,15 @@ namespace Saito
             if (other.gameObject.tag =="Enemy1") {
                 _model.UpdateCount(10);
             }
-            if (other.gameObject.tag == "Enemy2")
+            else if (other.gameObject.tag == "Enemy2")
             {
                 _model.UpdateCount(20);
             }
-            if (other.gameObject.tag == "Enemy3")
+            else if (other.gameObject.tag == "Enemy3")
             {
                 _model.UpdateCount(30);
             }
-            if (other.gameObject.tag == "Enemy4")
+            else if (other.gameObject.tag == "Enemy4")
             {
                 _model.UpdateCount(100);
             }
