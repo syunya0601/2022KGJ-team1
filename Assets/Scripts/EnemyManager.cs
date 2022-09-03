@@ -41,8 +41,8 @@ public class EnemyManager : MonoBehaviour
         //Debug.Log(LevelTime);
         if (LevelTime > 10)
         {
-            MaxTime -= 0.1f;
-            MinTime -= 0.1f;
+            MaxTime -= 0.2f;
+            MinTime -= 0.2f;
             LevelTime = 0;
             //Debug.Log(MaxTime);
             //Debug.Log(MinTime);
@@ -122,6 +122,13 @@ public class EnemyManager : MonoBehaviour
             }
             if (14 < instanceTypeRand && instanceTypeRand <= 15)
             {
+                enemyPosition1 = Camera.main.ViewportToWorldPoint(new Vector3(-0.3f, Random.Range(-0.1f, 1.1f), Camera.main.nearClipPlane));//画面左座標決め
+                enemyPosition2 = Camera.main.ViewportToWorldPoint(new Vector3(1.3f, Random.Range(-0.1f, 1.1f), Camera.main.nearClipPlane));//画面右座標決め
+                enemyPosition3 = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(-0.1f, 1.1f), 1.5f, Camera.main.nearClipPlane));//画面上座標決め
+
+                enemyPosition1.z = 0;
+                enemyPosition2.z = 0;
+                enemyPosition3.z = 0;
                 //3方向からの生成
                 if (instanceRand == 1)
                 {
