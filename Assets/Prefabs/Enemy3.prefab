@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8630617420336261521}
   - component: {fileID: 614115026210729248}
   - component: {fileID: -6911617072336103590}
+  - component: {fileID: -876663769211706280}
   m_Layer: 0
   m_Name: Enemy3
   m_TagString: Enemy3
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7b7337c6cc42cfd4d97f7ec572e004a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -98,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.06
   target: {fileID: 8787157132470785817, guid: 506f52b3497d87f479914945aa531db8, type: 3}
-  power: 5
+  power: 30
   transrate: 0
   wallDestroy: 0
 --- !u!61 &-6911617072336103590
@@ -127,3 +128,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9339712, y: 1.8050826}
   m_EdgeRadius: 0
+--- !u!50 &-876663769211706280
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8630617420336261522}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
