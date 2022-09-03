@@ -1,4 +1,3 @@
-using Cysharp.Threading.Tasks;
 using UniRx;
 using UnityEditor;
 using UnityEngine;
@@ -17,14 +16,9 @@ namespace Saito
            _button.OnClickAsObservable()
                 .Subscribe(_ =>
                 {
-                    LoadScene();
+                SceneManager.LoadSceneAsync(_scene.name);
                 })
                 .AddTo(this);
-       }
-
-       private async void LoadScene()
-       {
-           await SceneManager.LoadSceneAsync(_scene.name);
        }
     }
 }
