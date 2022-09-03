@@ -36,7 +36,8 @@ public class ModeManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.Z)){
+        if (Input.GetKey(KeyCode.Z))
+        {
             mode1 = true;
             mode2 = false;
             mode3 = false;
