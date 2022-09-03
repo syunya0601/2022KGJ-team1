@@ -7,6 +7,8 @@ public class EnemyController : MonoBehaviour
     public float speed;
     [SerializeField] Transform target;//卵の座標
     [SerializeField] int power;//攻撃力
+    public bool transrate;
+    public bool wallDestroy;//猫の手の削除
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +20,26 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // 対象物へのベクトルを算出
-        Vector2 toDirection = target.transform.position - transform.position;
-        // 対象物へ回転する
-        transform.rotation = Quaternion.FromToRotation(Vector2.up, toDirection);
+        if (transrate == true)
+        {
+            // 対象物へのベクトルを算出
+            Vector2 toDirection = target.transform.position - transform.position;
+            // 対象物へ回転する
+            transform.rotation = Quaternion.FromToRotation(Vector2.up, toDirection);
+        }
     
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed);
+    }
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        //Debug.Log("hit");
+        if (collider.gameObject.name == "wall")
+        {
+            if (wallDestroy == true)
+            {
+                Destroy(this.gameObject);
+                Debug.Log("hit");
+            }
+        }
     }
 }

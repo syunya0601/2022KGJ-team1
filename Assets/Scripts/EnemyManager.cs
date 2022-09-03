@@ -6,16 +6,16 @@ public class EnemyManager : MonoBehaviour
 {
     [SerializeField]
     [Tooltip("生成するGameObject")]
-    private GameObject createPrefab1;
+    private GameObject createPrefab1;//石
     [SerializeField]
     [Tooltip("生成するGameObject")]
-    private GameObject createPrefab2;
+    private GameObject createPrefab2;//ボール
     [SerializeField]
     [Tooltip("生成するGameObject")]
-    private GameObject createPrefab3;
+    private GameObject createPrefab3;//鳥
     [SerializeField]
     [Tooltip("生成するGameObject")]
-    private GameObject createPrefab4;
+    private GameObject createPrefab4;//猫の手
 
     // 経過時間
     private float LevelTime;
@@ -24,9 +24,11 @@ public class EnemyManager : MonoBehaviour
     float MaxTime = 5.0f;
     float MinTime = 3.0f;
 
+    Vector2 lscale;
+
     private void Start()
     {
-
+        lscale = createPrefab3.transform.localScale;
     }
     // Update is called once per frame
     void Update()
@@ -50,78 +52,88 @@ public class EnemyManager : MonoBehaviour
         {
 
 
-            Vector3 enemyPosition2 = Camera.main.ViewportToWorldPoint(new Vector3(-0.1f, Random.Range(-0.1f, 1.1f), Camera.main.nearClipPlane));//画面左から生成
-            Vector3 enemyPosition3 = Camera.main.ViewportToWorldPoint(new Vector3(1.1f, Random.Range(-0.1f, 1.1f), Camera.main.nearClipPlane));//画面右から生成
-            Vector3 enemyPosition4 = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(-0.1f, 1.1f), 1.1f, Camera.main.nearClipPlane));//画面上から生成
-            //enemyPosition1.z = 0;
+            Vector3 enemyPosition1 = Camera.main.ViewportToWorldPoint(new Vector3(-0.1f, Random.Range(-0.1f, 1.1f), Camera.main.nearClipPlane));//画面左座標決め
+            Vector3 enemyPosition2 = Camera.main.ViewportToWorldPoint(new Vector3(1.1f, Random.Range(-0.1f, 1.1f), Camera.main.nearClipPlane));//画面右座標決め
+            Vector3 enemyPosition3 = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(-0.1f, 1.1f), 1.1f, Camera.main.nearClipPlane));//画面上座標決め
+            
+            enemyPosition1.z = 0;
             enemyPosition2.z = 0;
             enemyPosition3.z = 0;
-            enemyPosition4.z = 0;
             int instanceTypeRand = Random.Range(1, 16);
             int instanceRand = Random.Range(1, 4);
             if (1 <= instanceTypeRand &&instanceTypeRand < 8)
             {
-                //4方向からの生成
+                //3方向からの生成
 
                 if (instanceRand == 1)
                 {
-                    Instantiate(createPrefab1, enemyPosition2, Quaternion.identity);
+                    Instantiate(createPrefab1, enemyPosition1, Quaternion.identity);
                 }
                 else if (instanceRand == 2)
                 {
-                    Instantiate(createPrefab1, enemyPosition3, Quaternion.identity);
+                    Instantiate(createPrefab1, enemyPosition2, Quaternion.identity);
                 }
                 else if (instanceRand == 3)
                 {
-                    Instantiate(createPrefab1, enemyPosition4, Quaternion.identity);
+                    Instantiate(createPrefab1, enemyPosition3, Quaternion.identity);
                 }
             }
             if (8 <= instanceTypeRand && instanceTypeRand < 12)
             {
-                //4方向からの生成
+                //3方向からの生成
                 if (instanceRand == 1)
                 {
-                    Instantiate(createPrefab2, enemyPosition2, Quaternion.identity);
+                    Instantiate(createPrefab2, enemyPosition1, Quaternion.identity);
                 }
                 else if (instanceRand == 2)
                 {
-                    Instantiate(createPrefab2, enemyPosition3, Quaternion.identity);
+                    Instantiate(createPrefab2, enemyPosition2, Quaternion.identity);
                 }
                 else if (instanceRand == 3)
                 {
-                    Instantiate(createPrefab2, enemyPosition4, Quaternion.identity);
+                    Instantiate(createPrefab2, enemyPosition3, Quaternion.identity);
                 }
             }
             if (12 <= instanceTypeRand && instanceTypeRand <= 14)
             {
-                //4方向からの生成
+                //3方向からの生成
                 if (instanceRand == 1)
                 {
-                    Instantiate(createPrefab3, enemyPosition2, Quaternion.identity);
+                    createPrefab3.GetComponent<SpriteRenderer>().flipX = true;
+                    Instantiate(createPrefab3, enemyPosition1, Quaternion.identity);
                 }
                 else if (instanceRand == 2)
                 {
-                    Instantiate(createPrefab3, enemyPosition3, Quaternion.identity);
+                    createPrefab3.GetComponent<SpriteRenderer>().flipX = false;
+                    Instantiate(createPrefab3, enemyPosition2, Quaternion.identity);
                 }
                 else if (instanceRand == 3)
                 {
-                    Instantiate(createPrefab3, enemyPosition4, Quaternion.identity);
+                    if (enemyPosition3.x <= 0)
+                    {
+                        createPrefab3.GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                    else if (enemyPosition3.x > 0)
+                    {
+                        createPrefab3.GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    Instantiate(createPrefab3, enemyPosition3, Quaternion.identity);
                 }
             }
             if (14 < instanceTypeRand && instanceTypeRand <= 15)
             {
-                //4方向からの生成
+                //3方向からの生成
                 if (instanceRand == 1)
                 {
-                    Instantiate(createPrefab4, enemyPosition2, Quaternion.identity);
+                    Instantiate(createPrefab4, enemyPosition1, Quaternion.identity);
                 }
                 else if (instanceRand == 2)
                 {
-                    Instantiate(createPrefab4, enemyPosition3, Quaternion.identity);
+                    Instantiate(createPrefab4, enemyPosition2, Quaternion.identity);
                 }
                 else if (instanceRand == 3)
                 {
-                    Instantiate(createPrefab4, enemyPosition4, Quaternion.identity);
+                    Instantiate(createPrefab4, enemyPosition3, Quaternion.identity);
                 }
             }
 
