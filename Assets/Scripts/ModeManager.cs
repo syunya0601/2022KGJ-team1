@@ -22,6 +22,9 @@ public class ModeManager : MonoBehaviour
     Transform myTransform;
     Vector3 pos;
 
+    public AudioClip sound1;
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,14 +33,17 @@ public class ModeManager : MonoBehaviour
 
         myTransform = this.transform;
         pos = myTransform.position;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.Z)|| Input.GetKey(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Z)|| Input.GetKeyDown(KeyCode.Alpha1))
         {
+            audioSource.PlayOneShot(sound1);
             mode1 = true;
             mode2 = false;
             mode3 = false;
@@ -46,8 +52,9 @@ public class ModeManager : MonoBehaviour
             MainSpriteRenderer.sprite = Mode1;
             pos.y = -3.8f;
         }
-        if (Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2))
         {
+            audioSource.PlayOneShot(sound1);
             mode1 = false;
             mode2 = true;
             mode3 = false;
@@ -55,8 +62,9 @@ public class ModeManager : MonoBehaviour
             MainSpriteRenderer.sprite = Mode2;
             pos.y = -3.8f;
         }
-        if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3))
         {
+            audioSource.PlayOneShot(sound1);
             mode1 = false;
             mode2 = false;
             mode3 = true;
@@ -64,8 +72,9 @@ public class ModeManager : MonoBehaviour
             MainSpriteRenderer.sprite = Mode3;
             pos.y = -3.8f;
         }
-        if (Input.GetKey(KeyCode.V) || Input.GetKey(KeyCode.Alpha4))
+        if (Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.Alpha4))
         {
+            audioSource.PlayOneShot(sound1);
             mode1 = false;
             mode2 = false;
             mode3 = false;

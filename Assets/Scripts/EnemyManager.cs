@@ -24,11 +24,15 @@ public class EnemyManager : MonoBehaviour
     float MaxTime = 5.0f;
     float MinTime = 3.0f;
 
-    Vector2 lscale;
+    public AudioClip sound1;
+    public AudioClip sound2;
+    public AudioClip sound3;
+    public AudioSource audioSource1;
+    public AudioSource audioSource2;
 
     private void Start()
     {
-        lscale = createPrefab3.transform.localScale;
+        //audioSource1 = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
@@ -67,14 +71,17 @@ public class EnemyManager : MonoBehaviour
 
                 if (instanceRand == 1)
                 {
+                    audioSource1.PlayOneShot(sound1);
                     Instantiate(createPrefab1, enemyPosition1, Quaternion.identity);
                 }
                 else if (instanceRand == 2)
                 {
+                    audioSource1.PlayOneShot(sound1);
                     Instantiate(createPrefab1, enemyPosition2, Quaternion.identity);
                 }
                 else if (instanceRand == 3)
                 {
+                    audioSource1.PlayOneShot(sound1);
                     Instantiate(createPrefab1, enemyPosition3, Quaternion.identity);
                 }
             }
@@ -83,14 +90,17 @@ public class EnemyManager : MonoBehaviour
                 //3ï˚å¸Ç©ÇÁÇÃê∂ê¨
                 if (instanceRand == 1)
                 {
+                    audioSource1.PlayOneShot(sound1);
                     Instantiate(createPrefab2, enemyPosition1, Quaternion.identity);
                 }
                 else if (instanceRand == 2)
                 {
+                    audioSource1.PlayOneShot(sound1);
                     Instantiate(createPrefab2, enemyPosition2, Quaternion.identity);
                 }
                 else if (instanceRand == 3)
                 {
+                    audioSource1.PlayOneShot(sound1);
                     Instantiate(createPrefab2, enemyPosition3, Quaternion.identity);
                 }
             }
@@ -99,16 +109,19 @@ public class EnemyManager : MonoBehaviour
                 //3ï˚å¸Ç©ÇÁÇÃê∂ê¨
                 if (instanceRand == 1)
                 {
+                    audioSource2.PlayOneShot(sound2);
                     createPrefab3.GetComponent<SpriteRenderer>().flipX = true;
                     Instantiate(createPrefab3, enemyPosition1, Quaternion.identity);
                 }
                 else if (instanceRand == 2)
                 {
+                    audioSource2.PlayOneShot(sound2);
                     createPrefab3.GetComponent<SpriteRenderer>().flipX = false;
                     Instantiate(createPrefab3, enemyPosition2, Quaternion.identity);
                 }
                 else if (instanceRand == 3)
                 {
+
                     if (enemyPosition3.x <= 0)
                     {
                         createPrefab3.GetComponent<SpriteRenderer>().flipX = true;
@@ -117,6 +130,7 @@ public class EnemyManager : MonoBehaviour
                     {
                         createPrefab3.GetComponent<SpriteRenderer>().flipX = false;
                     }
+                    audioSource2.PlayOneShot(sound2);
                     Instantiate(createPrefab3, enemyPosition3, Quaternion.identity);
                 }
             }
@@ -132,14 +146,17 @@ public class EnemyManager : MonoBehaviour
                 //3ï˚å¸Ç©ÇÁÇÃê∂ê¨
                 if (instanceRand == 1)
                 {
+                    audioSource2.PlayOneShot(sound3);
                     Instantiate(createPrefab4, enemyPosition1, Quaternion.identity);
                 }
                 else if (instanceRand == 2)
                 {
+                    audioSource2.PlayOneShot(sound3);
                     Instantiate(createPrefab4, enemyPosition2, Quaternion.identity);
                 }
                 else if (instanceRand == 3)
                 {
+                    audioSource2.PlayOneShot(sound3);
                     Instantiate(createPrefab4, enemyPosition3, Quaternion.identity);
                 }
             }

@@ -26,9 +26,14 @@ namespace Saito
         [SerializeField] private SceneAsset scene;
         [SerializeField] private ScoreManager _scoreManager;
 
+        public AudioClip sound1;
+        AudioSource audioSource;
+
         // Start is called before the first frame update
         void Start()
-        { 
+        {
+            audioSource = GetComponent<AudioSource>();
+
             var time = 0.0f;
                      Observable.EveryUpdate()
                          .Subscribe(value =>
@@ -48,22 +53,27 @@ namespace Saito
                         if (x == 0) { }
                         else if (x <= 20)
                         {
+                            audioSource.PlayOneShot(sound1);
                             _view.ChangeSprite(_sprite2);
                         }
                         else if (x <= 40)
                         {
+                            audioSource.PlayOneShot(sound1);
                             _view.ChangeSprite(_sprite3);
                         }
                         else if (x <= 60)
                         {
+                            audioSource.PlayOneShot(sound1);
                             _view.ChangeSprite(_sprite4);
                         }
                         else if (x <= 80)
                         {
+                            audioSource.PlayOneShot(sound1);
                             _view.ChangeSprite(_sprite5);
                         }
                         if(x >= 100)
                         {
+                            audioSource.PlayOneShot(sound1);
                             Thread.Sleep(TimeSpan.FromSeconds(2f));
                             _view.ChangeSprite(_sprite1);
                             _scoreManager.SetScore((int)time);
