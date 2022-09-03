@@ -64,15 +64,11 @@ namespace Saito
                         }
                         if(x >= 100)
                         {
-
                             Thread.Sleep(TimeSpan.FromSeconds(2f));
                             _view.ChangeSprite(_sprite1);
-                            
-                            _view.ChangeSprite(_sprite);
                             _scoreManager.SetScore((int)time);
                             _scoreManager.SetTime(time);
                              SceneManager.LoadScene(scene.name);
-
                         }
 
                         _slider.value = x;
