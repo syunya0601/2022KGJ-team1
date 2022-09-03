@@ -654,11 +654,11 @@ MonoBehaviour:
   _model: {fileID: 105293451}
   _view: {fileID: 364674241}
   _slider: {fileID: 1525116030}
-  _sprite1: {fileID: 21300000, guid: ed8231bde52fa694382184d4cdd3bdcd, type: 3}
-  _sprite2: {fileID: 21300000, guid: 316b30326a307964a9c6b94cca98a98a, type: 3}
-  _sprite3: {fileID: 21300000, guid: 73c88bef116ab594a9a61c4551166178, type: 3}
-  _sprite4: {fileID: 21300000, guid: d70ac320361803044b09adfc626100d6, type: 3}
-  _sprite5: {fileID: 21300000, guid: c73a0e2350028d743bc2eb73278875c1, type: 3}
+  _sprite1: {fileID: 21300000, guid: c73a0e2350028d743bc2eb73278875c1, type: 3}
+  _sprite2: {fileID: 21300000, guid: ed8231bde52fa694382184d4cdd3bdcd, type: 3}
+  _sprite3: {fileID: 21300000, guid: 316b30326a307964a9c6b94cca98a98a, type: 3}
+  _sprite4: {fileID: 21300000, guid: 73c88bef116ab594a9a61c4551166178, type: 3}
+  _sprite5: {fileID: 21300000, guid: d70ac320361803044b09adfc626100d6, type: 3}
   scene: {fileID: 102900000, guid: 9b0c08fa7f77445468192a3124218785, type: 3}
   _scoreManager: {fileID: 1519147195}
 --- !u!4 &274424759
