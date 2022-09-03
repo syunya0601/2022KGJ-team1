@@ -61,7 +61,7 @@ public class EnemyManager : MonoBehaviour
             enemyPosition3.z = 0;
             int instanceTypeRand = Random.Range(1, 16);
             int instanceRand = Random.Range(1, 4);
-            if (1 <= instanceTypeRand &&instanceTypeRand < 8)
+            /*if (1 <= instanceTypeRand &&instanceTypeRand < 8)
             {
                 //3•ûŒü‚©‚ç‚Ì¶¬
 
@@ -119,8 +119,8 @@ public class EnemyManager : MonoBehaviour
                     }
                     Instantiate(createPrefab3, enemyPosition3, Quaternion.identity);
                 }
-            }
-            if (14 < instanceTypeRand && instanceTypeRand <= 15)
+            }*/
+            if (1 < instanceTypeRand && instanceTypeRand <= 15)
             {
                 //3•ûŒü‚©‚ç‚Ì¶¬
                 if (instanceRand == 1)

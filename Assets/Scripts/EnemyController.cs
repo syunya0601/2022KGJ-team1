@@ -6,7 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     public float speed;
     [SerializeField] Transform target;//—‘‚ÌÀ•W
-    [SerializeField] int power;//UŒ‚—Í
+    public int power=0;//UŒ‚—Í
     public bool transrate;
     public bool wallDestroy;//”L‚Ìè‚Ìíœ
     // Start is called before the first frame update
