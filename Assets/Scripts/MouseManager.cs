@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Saito;
 
 public class MouseManager : MonoBehaviour
 {
-
+    [SerializeField] private Model _model;
     private GameObject obj;
     ModeManager modemanager;
     GameObject clickedGameObject;
@@ -45,6 +46,13 @@ public class MouseManager : MonoBehaviour
                 {
                     //Debug.Log(clickedGameObject);
                     Destroy(clickedGameObject);
+                }
+                clickedGameObject = hitSprite.transform.gameObject;
+                if (clickedGameObject.tag == "Bomb")
+                {
+                    //Debug.Log(clickedGameObject);
+                    Destroy(clickedGameObject);
+                    _model.UpdateCount(50);
                 }
 
             }

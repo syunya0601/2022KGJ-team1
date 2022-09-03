@@ -20,5 +20,6 @@ namespace Saito
         {
             _image.sprite = sprite;
         }
+
     }
 }
