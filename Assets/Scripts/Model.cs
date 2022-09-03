@@ -10,9 +10,12 @@ namespace Saito
     private IntReactiveProperty _current = new IntReactiveProperty();
     public IReactiveProperty<int> Current => _current;
 
+    private int count = 0;
+    
     public void UpdateCount(int value)
     {
-      _current.Value = Mathf.Clamp(value, 0, 100);
+      _current.Value = count+Mathf.Clamp(value, 0, 100);
+      count=_current.Value;
     }
   }
 }
