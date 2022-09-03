@@ -30,7 +30,7 @@ namespace Saito
                 _model.UpdateCount(100);
             }
             Destroy(other.gameObject);
-            
+
         }
     }
 }
