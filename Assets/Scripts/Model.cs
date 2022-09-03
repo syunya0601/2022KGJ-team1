@@ -15,7 +15,8 @@ namespace Saito
     public void UpdateCount(int value)
     {
       _current.Value = count+Mathf.Clamp(value, 0, 100);
-      count=_current.Value;
+      count = _current.Value;
+      Debug.Log(count);
     }
   }
 }
