@@ -9,7 +9,7 @@ namespace Saito
     public class EggManager : MonoBehaviour
     {
         [SerializeField] private Model _model;
-        [SerializeField] private int _damegeAmount = 10;
+        //[SerializeField] private int _damegeAmount = 10;
         //[SerializeField] private EnemyController _enemeyController;
         private void OnTriggerEnter2D(Collider2D other)
         {

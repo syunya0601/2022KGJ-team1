@@ -17,7 +17,11 @@ namespace Saito
         [SerializeField] private View _view;
 
         [SerializeField] private Slider _slider;
-        [SerializeField] private Sprite _sprite;
+        [SerializeField] private Sprite _sprite1;
+        [SerializeField] private Sprite _sprite2;
+        [SerializeField] private Sprite _sprite3;
+        [SerializeField] private Sprite _sprite4;
+        [SerializeField] private Sprite _sprite5;
 
         [SerializeField] private SceneAsset scene;
 
@@ -28,10 +32,27 @@ namespace Saito
             _model.Current
                 .Subscribe(x =>
                     {
-                        if (x >= 100)
+                        if (x == 0) { }
+                        else if (x <= 20)
+                        {
+                            _view.ChangeSprite(_sprite2);
+                        }
+                        else if (x <= 40)
+                        {
+                            _view.ChangeSprite(_sprite3);
+                        }
+                        else if (x <= 60)
+                        {
+                            _view.ChangeSprite(_sprite4);
+                        }
+                        else if (x <= 80)
+                        {
+                            _view.ChangeSprite(_sprite5);
+                        }
+                        if(x >= 100)
                         {
                             Thread.Sleep(TimeSpan.FromSeconds(2f));
-                            _view.ChangeSprite(_sprite);
+                            _view.ChangeSprite(_sprite1);
                             SceneManager.LoadScene(scene.name);
                         }
 
