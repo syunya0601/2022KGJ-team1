@@ -14,6 +14,7 @@ namespace Saito
         private void OnTriggerEnter(Collider other)
         {
             _model.UpdateCount(_damegeAmount);
+            Debug.Log(other.name+"と衝突しました。");
         }
     }
 }

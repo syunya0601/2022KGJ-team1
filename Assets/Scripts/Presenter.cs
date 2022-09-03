@@ -1,8 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
 using UniRx;
+using UnityEditor;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Saito
@@ -15,6 +19,8 @@ namespace Saito
         [SerializeField] private Slider _slider;
         [SerializeField] private Sprite _sprite;
 
+        [SerializeField] private SceneAsset scene;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -22,7 +28,12 @@ namespace Saito
             _model.Current
                 .Subscribe(x =>
                     {
-                        if (x == 100) _view.ChangeSprite(_sprite);
+                        if (x == 100)
+                        {
+                            Thread.Sleep(TimeSpan.FromSeconds(2f));
+                            _view.ChangeSprite(_sprite);
+                            SceneManager.LoadScene(scene.name);
+                        }
 
                         _slider.value = x;
                         //_view.UpdateText(_slider.value.ToString());
