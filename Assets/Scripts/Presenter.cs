@@ -24,7 +24,7 @@ namespace Saito
         [SerializeField] private Sprite _sprite4;
         [SerializeField] private Sprite _sprite5;
 
-        [SerializeField] private SceneAsset scene;
+        public  SceneAsset scene;
         [SerializeField] private ScoreManager _scoreManager;
 
         [SerializeField] private RectTransform _rectTransform;
