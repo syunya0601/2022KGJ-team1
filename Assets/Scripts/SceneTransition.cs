@@ -8,7 +8,7 @@ namespace Saito
 {
     public class SceneTransition : MonoBehaviour
     {
-        public  SceneAsset _scene;
+        public  string _scene;
         [SerializeField] private Button _button;
 
 
@@ -22,7 +22,7 @@ namespace Saito
                         ScoreManager.Instance.Initialized();
                     }
 
-                    SceneManager.LoadSceneAsync(_scene.name);
+                    SceneManager.LoadSceneAsync(_scene);
                 })
                 .AddTo(this);
 

@@ -641,6 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a95098af84f174ba54fcddfba5225e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _button: {fileID: 825456593}
   GreenGauge: {fileID: 1928008155}
   RedGauge: {fileID: 1077840230}
 --- !u!1 &1395302692

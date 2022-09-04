@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38baeb6ee459b974c9bd30017c7f65da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: {fileID: 102900000, guid: c1d4ad994cc42ec4293bb2ed41ad9cae, type: 3}
+  _scene: Title
   _button: {fileID: 418119499}
 --- !u!114 &418119499
 MonoBehaviour:
@@ -570,7 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38baeb6ee459b974c9bd30017c7f65da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: {fileID: 102900000, guid: ecbf26bc82aea3548a6464ba401abe53, type: 3}
+  _scene: GameScene
   _button: {fileID: 733246342}
 --- !u!114 &733246342
 MonoBehaviour:

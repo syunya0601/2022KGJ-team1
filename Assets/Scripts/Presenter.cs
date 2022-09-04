@@ -24,7 +24,7 @@ namespace Saito
         [SerializeField] private Sprite _sprite4;
         [SerializeField] private Sprite _sprite5;
 
-        public  SceneAsset scene;
+        public  string scene;
         [SerializeField] private ScoreManager _scoreManager;
 
         [SerializeField] private RectTransform _rectTransform;
@@ -87,7 +87,7 @@ namespace Saito
                                 _scoreManager.SetHightScore(_scoreManager.GetScore());
                             }
 
-                            SceneManager.LoadScene(scene.name);
+                            SceneManager.LoadScene(scene);
                         }
                         
                         _slider.value = x;

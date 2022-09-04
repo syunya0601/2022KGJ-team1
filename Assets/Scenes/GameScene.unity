@@ -627,8 +627,9 @@ MonoBehaviour:
   _sprite3: {fileID: 21300000, guid: 316b30326a307964a9c6b94cca98a98a, type: 3}
   _sprite4: {fileID: 21300000, guid: 73c88bef116ab594a9a61c4551166178, type: 3}
   _sprite5: {fileID: 21300000, guid: d70ac320361803044b09adfc626100d6, type: 3}
-  scene: {fileID: 102900000, guid: 9b0c08fa7f77445468192a3124218785, type: 3}
+  scene: Result
   _scoreManager: {fileID: 1519147195}
+  _rectTransform: {fileID: 0}
   sound1: {fileID: 8300000, guid: 9e81c33132bd2b848bb78c8cf4c2a511, type: 3}
 --- !u!4 &274424759
 Transform:
