@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Saito
 {
@@ -46,6 +47,12 @@ namespace Saito
         public float GetTime()
         {
             return Instance.Time;
+        }
+        
+        public void Initialized()
+        {
+            Instance._score = 0;
+            Instance._time = 0.0f;
         }
     }
 }
