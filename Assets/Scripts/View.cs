@@ -21,5 +21,9 @@ namespace Saito
             _image.sprite = sprite;
         }
 
+        public void BarAnimation(float value)
+        {
+            
+        }
     }
 }

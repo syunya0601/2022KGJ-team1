@@ -16,7 +16,12 @@ namespace Saito
            _button.OnClickAsObservable()
                 .Subscribe(_ =>
                 {
-                SceneManager.LoadSceneAsync(_scene.name);
+                    if (SceneManager.GetActiveScene().name == "Result")
+                    {
+                        ScoreManager.Instance.Initialized();
+                    }
+
+                    SceneManager.LoadSceneAsync(_scene.name);
                 })
                 .AddTo(this);
        }
