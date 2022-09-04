@@ -23,7 +23,7 @@ namespace Saito
         private void Start()
         {
             _score.text = "スコア:"+_scoreManager.GetScore().ToString();
-            _time.text = "生存時間"+_scoreManager.GetTime().ToString();
+            _time.text = "タイム"+_scoreManager.GetTime().ToString();
         }
     }
 }
