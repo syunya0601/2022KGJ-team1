@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
 using UniRx;
 using UnityEditor;
@@ -25,6 +26,8 @@ namespace Saito
 
         [SerializeField] private SceneAsset scene;
         [SerializeField] private ScoreManager _scoreManager;
+
+        [SerializeField] private RectTransform _rectTransform;
 
         public AudioClip sound1;
         AudioSource audioSource;
@@ -80,7 +83,7 @@ namespace Saito
                             _scoreManager.SetTime(time);
                              SceneManager.LoadScene(scene.name);
                         }
-
+                        
                         _slider.value = x;
                         _view.UpdateText(_slider.value.ToString());
                     },
