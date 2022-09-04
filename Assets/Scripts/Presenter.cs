@@ -79,9 +79,15 @@ namespace Saito
                             audioSource.PlayOneShot(sound1);
                             Thread.Sleep(TimeSpan.FromSeconds(2f));
                             _view.ChangeSprite(_sprite1);
+                            Debug.Log(MouseManager.DestroyCount1+MouseManager.DestroyCount2+" : "+(int)time);
                             _scoreManager.SetScore((MouseManager.DestroyCount1+MouseManager.DestroyCount2)*(int)time);
                             _scoreManager.SetTime(time);
-                             SceneManager.LoadScene(scene.name);
+                            if (_scoreManager.GetScore() > _scoreManager.GetHightScore())
+                            {
+                                _scoreManager.SetHightScore(_scoreManager.GetScore());
+                            }
+
+                            SceneManager.LoadScene(scene.name);
                         }
                         
                         _slider.value = x;

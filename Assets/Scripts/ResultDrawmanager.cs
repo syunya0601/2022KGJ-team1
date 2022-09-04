@@ -10,6 +10,7 @@ namespace Saito
     public class ResultDrawmanager : MonoBehaviour
     {
         [SerializeField] private Text _score;
+        [SerializeField] private Text _Hightcore;
         [SerializeField] private Text _time;
 
         private ScoreManager _scoreManager = null;
@@ -22,8 +23,17 @@ namespace Saito
 
         private void Start()
         {
+            if (_scoreManager.GetHightScore()==_scoreManager.GetHightScore())
+            {
+                _Hightcore.text = "ハイスコア："+_scoreManager.GetHightScore();
+            }
+            else
+            {
+                _Hightcore.gameObject.SetActive(false);
+            }
+
             _score.text = "スコア:"+_scoreManager.GetScore().ToString();
-            _time.text = "タイム"+_scoreManager.GetTime().ToString();
+            _time.text = "タイム："+_scoreManager.GetTime().ToString();
         }
     }
 }
