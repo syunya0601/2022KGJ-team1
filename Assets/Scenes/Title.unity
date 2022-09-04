@@ -1074,11 +1074,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a15bd84fe3baa94d8d557957d3b426e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _panel: {fileID: 77141335}
-  _openButton: {fileID: 0}
-  _closedButton: {fileID: 440578284}
-  _leftButton: {fileID: 0}
-  _rightButton: {fileID: 0}
+  _panel: {fileID: 1468790831}
+  _openButton: {fileID: 2040168541}
+  _closedButton: {fileID: 1012445300}
 --- !u!1 &693815043
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,34 +12,11 @@ public class HowToPlay : MonoBehaviour
     [SerializeField] private Button _openButton;
     [SerializeField] private Button _closedButton;
     
-    [SerializeField] private Button _leftButton;
-    [SerializeField] private Button _rightButton;
-    
     void Start()
     {
-        _openButton.OnClickAsObservable()
-            .Subscribe(_ =>
-            {
-                _panel.SetActive(true);
-            })
-            .AddTo(this);
-
-        _closedButton.OnClickAsObservable()
-            .Subscribe(_ =>
-            {
-                _panel.SetActive(false);
-            })
-            .AddTo(this);
-
-        /*
         Observable.Merge(
-            _leftButton.Select(_ => +),
-            _rightButton.Select(_ =>)
-        ).Subscribe(_ =>
-            {
-                
-            })
-            .AddTo(this);
-            */
+            _openButton.OnClickAsObservable().Select(_ => true),
+            _closedButton.OnClickAsObservable().Select(_ => false)
+        ).Subscribe(flag => { _panel.SetActive(flag); }).AddTo(this);
     }
 }
