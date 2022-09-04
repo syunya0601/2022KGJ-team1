@@ -11,7 +11,8 @@ namespace Saito
         [SerializeField] private SceneAsset _scene;
         [SerializeField] private Button _button;
 
-       private void Start()
+
+        private void Start()
        {
            _button.OnClickAsObservable()
                 .Subscribe(_ =>
@@ -19,6 +20,7 @@ namespace Saito
                 SceneManager.LoadSceneAsync(_scene.name);
                 })
                 .AddTo(this);
-       }
+
+        }
     }
 }
