@@ -7,6 +7,7 @@ namespace Saito
 {
     public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
     {
+
         #region Singleton
 
         private void Awake()
@@ -29,6 +30,11 @@ namespace Saito
         private float _time = 0.0f;
         public float Time => _time;
 
+        private void Start()
+        {
+            MouseManager.DestroyCount1 = 0;
+            MouseManager.DestroyCount2 = 0;
+        }
         public void SetScore(int score)
         {
             Instance._score = score;
