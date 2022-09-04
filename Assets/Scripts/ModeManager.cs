@@ -50,7 +50,7 @@ public class ModeManager : MonoBehaviour
             mode4 = false;
             
             MainSpriteRenderer.sprite = Mode1;
-            pos.y = -3.8f;
+            pos.y = -4.0f;
         }
         if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -60,7 +60,7 @@ public class ModeManager : MonoBehaviour
             mode3 = false;
             mode4 = false;
             MainSpriteRenderer.sprite = Mode2;
-            pos.y = -3.8f;
+            pos.y = -4.0f;
         }
         if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -70,7 +70,7 @@ public class ModeManager : MonoBehaviour
             mode3 = true;
             mode4 = false;
             MainSpriteRenderer.sprite = Mode3;
-            pos.y = -3.8f;
+            pos.y = -4.0f;
         }
         if (Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.Alpha4))
         {
@@ -89,7 +89,7 @@ public class ModeManager : MonoBehaviour
         {
             mode4 = false;
             wall.gameObject.SetActive(false);
-            pos.y = -2.8f;
+            pos.y = -4.0f;
             MainSpriteRenderer.sprite = none;
 
         }
