@@ -663,7 +663,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -675,7 +675,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u30AF\u30EC\u30B8\u30C3\u30C8\n\n\u52B9\u679C\u97F3\u30FBBGM\nSpringin
-    Sound Stock\u69D8\n\u52B9\u679C\u97F3\u30E9\u30DC\u69D8\nOtoLogic\u69D8\n\u30CB\u30B3\u30CB\u30B3\u30FB\u30B3\u30E2\u30F3\u30BA\u69D8\n\n\u5236\u4F5C\u8005\n\u3057\u3085\u3093\u3084\n\u3061\u3044\u3071\u308F\n\u308B\u3044\u308B\u3044\n\n\n\n"
+    Sound Stock\u69D8\n\u52B9\u679C\u97F3\u30E9\u30DC\u69D8\nOtoLogic\u69D8\n\u30CB\u30B3\u30CB\u30B3\u30FB\u30B3\u30E2\u30F3\u30BA\u69D8\n\n\u7ACB\u3061\u7D75\u30FB\u80CC\u666F\u7D20\u6750\n\u3044\u3089\u3059\u3068\u3084\u69D8\nBEIZ
+    images\u69D8\n\n\u5236\u4F5C\u8005\n\u3057\u3085\u3093\u3084\n\u3061\u3044\u3071\u308F\n\u308B\u3044\u308B\u3044\n\n\n\n"
 --- !u!222 &1979425780
 CanvasRenderer:
   m_ObjectHideFlags: 0
