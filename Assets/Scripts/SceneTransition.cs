@@ -8,7 +8,7 @@ namespace Saito
 {
     public class SceneTransition : MonoBehaviour
     {
-        [SerializeField] private SceneAsset _scene;
+        public  SceneAsset _scene;
         [SerializeField] private Button _button;
 
 
