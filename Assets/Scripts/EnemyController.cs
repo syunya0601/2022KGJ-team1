@@ -11,12 +11,15 @@ public class EnemyController : MonoBehaviour
     public int power=0;//çUåÇóÕ
     public bool transrate;
     public bool wallDestroy;//îLÇÃéËÇÃçÌèú
+
+    public AudioClip sound1;
+    AudioSource audioSource1;
     // Start is called before the first frame update
     void Start()
     {
  
         target.transform.position = new Vector2(0.0f, 0.0f);
-        
+        audioSource1 = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,6 +42,7 @@ public class EnemyController : MonoBehaviour
         {
             if (wallDestroy == true)
             {
+                audioSource1.PlayOneShot(sound1);
                 MouseManager.DestroyCount1 += 1;
                 Destroy(this.gameObject);
                 
