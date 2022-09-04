@@ -12,11 +12,10 @@ public class ScrollBarTest : MonoBehaviour
 
     private float maxLife = 1.0f;
     private float life = 0.5f;
-    private float reducationValue = 0.2f;
-    
+
     private Tween redGaugeTween;
 
-    public void Get()
+    public void Get(float reducationValue)
     {
         var valueFrom = life / maxLife;
         var valueTo = (life - reducationValue) / maxLife;

@@ -24,6 +24,9 @@ namespace Saito
 
         #endregion
 
+        private int _hightScore = 0;
+        public int hightScore => _hightScore;
+        
         private int _score = 0;
         public int Score => _score;
 
@@ -43,6 +46,16 @@ namespace Saito
         public int GetScore()
         {
             return Instance.Score;
+        }
+        
+        public void SetHightScore(int hightScore)
+        {
+            Instance._hightScore = hightScore;
+        }
+
+        public int GetHightScore()
+        {
+            return Instance.hightScore;
         }
 
         public void SetTime(float time)
