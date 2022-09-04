@@ -22,8 +22,8 @@ namespace Saito
 
         private void Start()
         {
-            _score.text = _scoreManager.GetScore().ToString();
-            _time.text = _scoreManager.GetTime().ToString();
+            _score.text = "スコア:"+_scoreManager.GetScore().ToString();
+            _time.text = "生存時間"+_scoreManager.GetTime().ToString();
         }
     }
 }
