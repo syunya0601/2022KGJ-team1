@@ -14,7 +14,7 @@ public class MouseManager : MonoBehaviour
     public static int DestroyCount2 = 0;//score
 
     [SerializeField]
-    [Tooltip("”­¶‚³‚¹‚éƒGƒtƒFƒNƒg(ƒp[ƒeƒBƒNƒ‹)")]
+    [Tooltip("ç™ºç”Ÿã•ã›ã‚‹ã‚¨ãƒ•ã‚§ã‚¯ãƒˆ(ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«)")]
     private ParticleSystem particle;
 
     public AudioClip sound1;
@@ -52,9 +52,9 @@ public class MouseManager : MonoBehaviour
                     audioSource.PlayOneShot(sound1);
 
                     ParticleSystem newParticle = Instantiate(particle);
-                    // ƒp[ƒeƒBƒNƒ‹‚Ì”­¶êŠ‚ğ‚±‚ÌƒXƒNƒŠƒvƒg‚ğƒAƒ^ƒbƒ`‚µ‚Ä‚¢‚éGameObject‚ÌêŠ‚É‚·‚éB
+                    // ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«ã®ç™ºç”Ÿå ´æ‰€ã‚’ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ã‚¢ã‚¿ãƒƒãƒã—ã¦ã„ã‚‹GameObjectã®å ´æ‰€ã«ã™ã‚‹ã€‚
                     newParticle.transform.position = clickedGameObject.transform.position;
-                    // ƒp[ƒeƒBƒNƒ‹‚ğ”­¶‚³‚¹‚éB
+                    // ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«ã‚’ç™ºç”Ÿã•ã›ã‚‹ã€‚
                     newParticle.Play();
 
                     //Debug.Log(clickedGameObject);
@@ -70,9 +70,9 @@ public class MouseManager : MonoBehaviour
                     audioSource.PlayOneShot(sound1);
 
                     ParticleSystem newParticle = Instantiate(particle);
-                    // ƒp[ƒeƒBƒNƒ‹‚Ì”­¶êŠ‚ğ‚±‚ÌƒXƒNƒŠƒvƒg‚ğƒAƒ^ƒbƒ`‚µ‚Ä‚¢‚éGameObject‚ÌêŠ‚É‚·‚éB
+                    // ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«ã®ç™ºç”Ÿå ´æ‰€ã‚’ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ã‚¢ã‚¿ãƒƒãƒã—ã¦ã„ã‚‹GameObjectã®å ´æ‰€ã«ã™ã‚‹ã€‚
                     newParticle.transform.position = clickedGameObject.transform.position;
-                    // ƒp[ƒeƒBƒNƒ‹‚ğ”­¶‚³‚¹‚éB
+                    // ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«ã‚’ç™ºç”Ÿã•ã›ã‚‹ã€‚
                     newParticle.Play();
 
                     //Debug.Log(clickedGameObject);
@@ -87,9 +87,9 @@ public class MouseManager : MonoBehaviour
                     audioSource.PlayOneShot(sound1);
 
                     ParticleSystem newParticle = Instantiate(particle);
-                    // ƒp[ƒeƒBƒNƒ‹‚Ì”­¶êŠ‚ğ‚±‚ÌƒXƒNƒŠƒvƒg‚ğƒAƒ^ƒbƒ`‚µ‚Ä‚¢‚éGameObject‚ÌêŠ‚É‚·‚éB
+                    // ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«ã®ç™ºç”Ÿå ´æ‰€ã‚’ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ã‚¢ã‚¿ãƒƒãƒã—ã¦ã„ã‚‹GameObjectã®å ´æ‰€ã«ã™ã‚‹ã€‚
                     newParticle.transform.position = clickedGameObject.transform.position;
-                    // ƒp[ƒeƒBƒNƒ‹‚ğ”­¶‚³‚¹‚éB
+                    // ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«ã‚’ç™ºç”Ÿã•ã›ã‚‹ã€‚
                     newParticle.Play();
 
                     //Debug.Log(clickedGameObject);
@@ -104,9 +104,9 @@ public class MouseManager : MonoBehaviour
                     audioSource.PlayOneShot(sound2);
 
                     ParticleSystem newParticle = Instantiate(particle);
-                    // ƒp[ƒeƒBƒNƒ‹‚Ì”­¶êŠ‚ğ‚±‚ÌƒXƒNƒŠƒvƒg‚ğƒAƒ^ƒbƒ`‚µ‚Ä‚¢‚éGameObject‚ÌêŠ‚É‚·‚éB
+                    // ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«ã®ç™ºç”Ÿå ´æ‰€ã‚’ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ã‚¢ã‚¿ãƒƒãƒã—ã¦ã„ã‚‹GameObjectã®å ´æ‰€ã«ã™ã‚‹ã€‚
                     newParticle.transform.position = clickedGameObject.transform.position;
-                    // ƒp[ƒeƒBƒNƒ‹‚ğ”­¶‚³‚¹‚éB
+                    // ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«ã‚’ç™ºç”Ÿã•ã›ã‚‹ã€‚
                     newParticle.Play();
 
                     //Debug.Log(clickedGameObject);
